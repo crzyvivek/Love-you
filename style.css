@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Courier New', monospace;
+  color: white;
+  text-align: center;
+}
+
+.overlay-text {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.stack {
+  line-height: 1.5;
+}
+
+.time, .moment, .miss {
+  margin-top: 10px;
+  line-height: 1.5;
+}
