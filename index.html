@@ -2,17 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I Miss You ❤️</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('bg.jpg') no-repeat center center/cover;
+      font-family: 'Roboto Mono', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+    }
+
+    .overlay-text {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .overlay-text h1 {
+      font-size: 60px;
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 10px;
+    }
+
+    .stack, .emoji, .time, .moment, .miss {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .miss {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .play-btn {
+      margin-top: 20px;
+      background: #ff5e78;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .play-btn:hover {
+      background: #ff2d55;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      font-size: 14px;
+      color: #eee;
+      font-family: 'Pacifico', cursive;
+    }
+
+    @media(max-width: 600px) {
+      .overlay-text h1 {
+        font-size: 40px;
+      }
+      .play-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
 </head>
 <body>
   <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
-  <div class="overlay-text" onclick="playMusic()">
+  <div class="overlay-text">
     <h1>I ❤️ U</h1>
     <p class="stack">Miss<br>Kiss<br>Hug<br>Love</p>
     <p class="emoji">🥰</p>
@@ -23,11 +102,14 @@
     </p>
     <p class="moment">And Every Single Moment.</p>
     <p class="miss">I miss you ❤️</p>
+    <button class="play-btn" onclick="playMusic()">▶️ Play Music</button>
   </div>
+
+  <div class="footer">Made with ❤️ by Vivek</div>
 
   <script>
     function playMusic() {
-      const music = document.getElementById("bgMusic");
+      const music = document.getElementById('bgMusic');
       music.play();
     }
   </script>
