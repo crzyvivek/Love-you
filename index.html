@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <audio autoplay loop>
+  <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <div class="overlay-text">
+  <div class="overlay-text" onclick="playMusic()">
     <h1>I ❤️ U</h1>
     <p class="stack">Miss<br>Kiss<br>Hug<br>Love</p>
     <p class="emoji">🥰</p>
@@ -24,5 +24,12 @@
     <p class="moment">And Every Single Moment.</p>
     <p class="miss">I miss you ❤️</p>
   </div>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById("bgMusic");
+      music.play();
+    }
+  </script>
 </body>
 </html>
